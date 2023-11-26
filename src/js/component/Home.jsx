@@ -12,6 +12,8 @@ const Home = () => {
 
 	const [cards] = useState([
 		{id: 1, name: 'javascript 1'},
+		{id: 2, name: 'card 2'},
+		{id: 2, name: 'card 2'},
 		{id: 2, name: 'card 2'}
 	]);
 	
@@ -19,7 +21,7 @@ const Home = () => {
 		<div className="text-center">
 			<Header />
 			<Navbar />
-			<div className="d-flex gap-4 justify-content-centers mt-4">
+			<div className="d-flex gap-4 justify-content-center mt-4">
 				{cards.map((item)=>{
 						return <Card title={item.name} key={item.id}/>
 					}
