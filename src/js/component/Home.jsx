@@ -9,16 +9,20 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 // create your first component
 const Home = () => {
-  const cards = [1,2,3,4];
+  const cards = [1, 2, 3, 4];
 
   return (
     <div className="text-center">
       <Header />
       <Navbar />
-	  <div className="d-flex gap-4 justify-content-center mt-4">
-        {cards.map((index) => (
-          <Card key={index} />
-        ))}
+      <div className="container mt-4">
+        <div className="row justify-content-center">
+          {cards.map((index) => (
+            <div key={index} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <Card />
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
